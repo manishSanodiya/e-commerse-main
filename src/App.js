@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Redirect } from "react-router-dom/cjs/react-router-dom";
+
+import Store from "./Store/Store/Store";
+import Home from "./HomePage/Home";
+import About from "./About/About";
+import Contadt from "./About/Contadt";
+import { Fragment, useContext } from "react";
+import Login from "./About/Login";
+import AuthContext from "./Store/auth-context";
+import { AuthContextProvider } from "./Store/auth-context";
 
 function App() {
+  const authCtx = useContext(AuthContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <AuthContextProvider>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/">
+        <Redirect to="/home" />
+      </Route>
+
+      <Route path="/home">
+        <Home />
+      </Route>
+
+      <Route path="/contact">
+        <Contadt />
+      </Route>
+
+    <Route path="/store">
+<Store />
+  
+      </Route>
+    <Route path="/login">
+        <Login />
+      </Route>
+      </AuthContextProvider>
+      
+    </Fragment>
   );
 }
 

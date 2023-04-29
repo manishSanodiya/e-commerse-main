@@ -1,0 +1,32 @@
+.generic1{
+    background-color: bisque;
+}
+.Generic{
+    background-color: rgb(80, 58, 58);
+    padding:40px;
+    margin:10px;
+    text-align: center;
+    font-size:xx-large;
+    color:aliceblue;
+}
+.gen{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 150px;
+}
+.GenericMainDiv{
+    padding:100px;
+    background-color: grey;
+    text-align: center;
+}
+.getButton{
+    padding: 10px;
+    background-color: rgb(52, 38, 65);
+    color:antiquewhite;
+}
+.header{
+    padding-left: 20px;
+}
+.nav a.active{
+color:red;
+border-bottom: solid black;
+}

@@ -1,0 +1,27 @@
+.image{
+    width: 100px;
+    height:100px
+}
+.price{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:larger;
+}
+.quantity{
+    font-size: larger;
+    margin:10px;
+    border-bottom: solid black;
+}
+.maindiv{
+    float: right;
+    margin-right: 20px;
+}
+.addremove{
+    color:antiquewhite;
+    background-color: rgb(33, 56, 42);
+    margin:3px;
+    border-radius: 20%;
+}
+.amountinput{
+    border-radius: 20%;
+    color:blue
+}
